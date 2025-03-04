@@ -31,7 +31,23 @@ Console.WriteLine("\tMENU\n +" +
     "8. Sell Employee");
 Console.WriteLine("______________________________");
 
-public class Product
+Console.Write("Your choice: ");
+int choice = int.Parse(Console.ReadLine());
+
+switch (choice)
+{
+    case 1:
+        var item = new Employee();
+        item.FullName = Console.ReadLine();
+        item.Description = Console.ReadLine();
+        item.ID = int.Parse(Console.ReadLine());
+        item.DateOfEmployment = int.Parse(Console.ReadLine());
+        item.Position = Console.ReadLine();
+        break;
+}
+
+
+public class Employee
 {
     // властивості Працівник
     public string FullName { get; set; }
