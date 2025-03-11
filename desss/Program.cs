@@ -17,6 +17,8 @@
 */
 
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 Console.WriteLine("Employee");
 
@@ -55,7 +57,27 @@ public class Employee
     public int ID { get; set; }
     public int DateOfEmployment { get; set; }
     public string Position { get; set; }
-}
+
+    public void ReadFromConsole()
+    {
+        Console.Write("Enter Full Name: ");
+        FullName = Console.ReadLine();
+
+        Description = Console.ReadLine();
+
+        ID = int.Parse(Console.ReadLine());
+        DateOfEmployment = int.Parse(Console.ReadLine());
+        Position = Console.ReadLine();
+    }
+
+    public void Show()
+    {
+        Console.WriteLine($"Name: {FullName}");
+        Console.WriteLine($"Price: {Description}$");
+        Console.WriteLine($"Quantity: {ID}$");
+        Console.WriteLine($"Discount: {DateOfEmployment}%");
+        Console.WriteLine($"Category: {Position}");
+    }
 
 
 
